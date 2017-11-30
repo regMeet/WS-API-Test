@@ -1,0 +1,165 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test apis",
+		"_postman_id": "40f46077-fddd-8112-9556-3e94a23bcd97",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get TODO LIST",
+			"request": {
+				"url": "http://localhost:8085/api/test",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "get TODO LIST - with name",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8085/api/test?name=Office",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"test"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Office",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "update Task",
+			"request": {
+				"url": "http://localhost:8085/api/test/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"office 2\",\n  \"description\": \"description\"\n}"
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "create Task",
+			"request": {
+				"url": "http://localhost:8085/api/test",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"office 2\",\n  \"description\": \"description\"\n}"
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "delete Task",
+			"request": {
+				"url": "http://localhost:8085/api/test/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "mark Task as done",
+			"request": {
+				"url": "http://localhost:8085/api/test/4/done",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
